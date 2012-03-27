@@ -20,6 +20,9 @@ Platypus::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Break up our logs daily
+  config.logger = Logger.new(config.paths['log'].first, 'daily')
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
