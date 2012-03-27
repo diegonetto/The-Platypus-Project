@@ -20,6 +20,21 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+# Use mysql2 gem in production environment
+group :production do
+  gem 'mysql2'
+end
+
+# Use sqlite3 gem in development environment
+group :development do
+  gem 'sqlite3'
+end
+
+# Use sqlite3 gem in test environment
+group :test do
+  gem 'sqlite3'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
