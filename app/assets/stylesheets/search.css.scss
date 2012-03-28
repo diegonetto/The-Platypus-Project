@@ -2,13 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$offWhite: #F1F1F1;
+
 .search {
 
-  
+  .result-title {
+    font-size: 18px;
+    a {
+      color: #2C5EB5;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
 
-  .query-results {
-    width: 600px;
-    margin: 0px auto;
+  .result-uri {
+    a {
+      text-decoration: none;
+      color: #F67F00;
+    }
+    a:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+
+  #recent-searches {
+    font-size: 18px;
+    font-weight: bold;
+    text-align:center;
+
+    position: relative;
+    top: -80px;
+    left: 300px;
+    z-index: -1;
+
+    a {
+      text-decoration: none;
+      color: $offWhite;
+    }
+
+    a:visited {
+      color: $offWhite;
+    }
+  
+    a:hover {
+      color: #F67F00;
+      background-color: transparent;
+    }
   }
 
 } /* End .search */

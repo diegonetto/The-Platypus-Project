@@ -1,3 +1,18 @@
 // Place all the styles related to the search_lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search_lists {
+
+  .search-keyword {
+    font-size: 18px;
+    color: #2C5EB5;
+    background-color: transparent;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+  .search-keyword:hover {
+    text-decoration: underline;
+  }
+}

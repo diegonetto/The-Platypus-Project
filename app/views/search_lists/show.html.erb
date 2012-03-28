@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<% @search_list.search_items.each do |item| %>
-  <%= link_to item.query, search_path + "?q=#{item.query}" %> 
-<% end %>
-
+<div class="middle-content">
+  <h2>Recent search terms</h2>
+  <% @search_list.search_items.each do |item| %>
+    <%= link_to item.query, search_path + "?q=#{item.query}", class: "search-keyword" %>
+  <% end %>
+</div>

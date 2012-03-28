@@ -1,9 +1,14 @@
-<div class="query-results">
+<div id="recent-searches">
+  <%= link_to "Recent Searches", @list %>
+</div>
+
+<div class="middle-content">
   <% @result.each do |web| %>
     <div>
       <p>
-        <%= link_to web.title, web.uri %><br />
-        <%= web.content.html_safe %>  
+        <span class="result-title"> <%= link_to web.title, web.uri %></span><br />
+        <%= web.content.html_safe %><br />
+        <span class="result-uri"><%= link_to web.uri, web.uri %></span>
       </p>
     </div> 
   <% end %>
