@@ -1,5 +1,7 @@
 Platypus::Application.routes.draw do
-  get "start/index"
+  resources :search_items
+
+  resources :search_lists
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,7 +53,7 @@ Platypus::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-  root to: 'start#index', as: 'start'
+  root to: 'search#index', as: 'search'
 
   # See how all your routes lay out with "rake routes"
 

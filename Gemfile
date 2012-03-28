@@ -51,3 +51,7 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Require google-search gem
+gem 'google-search', '~> 1.0.2'
+

@@ -1,0 +1,25 @@
+<h1>Listing search_items</h1>
+
+<table>
+  <tr>
+    <th>Search list</th>
+    <th>Search string</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @search_items.each do |search_item| %>
+  <tr>
+    <td><%= search_item.search_list_id %></td>
+    <td><%= search_item.search_string %></td>
+    <td><%= link_to 'Show', search_item %></td>
+    <td><%= link_to 'Edit', edit_search_item_path(search_item) %></td>
+    <td><%= link_to 'Destroy', search_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Search item', new_search_item_path %>
