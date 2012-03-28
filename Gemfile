@@ -7,6 +7,8 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 
+# Require google-search gem
+gem 'google-search', '~> 1.0.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -52,6 +54,4 @@ gem 'capistrano'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-# Require google-search gem
-gem 'google-search', '~> 1.0.2'
 

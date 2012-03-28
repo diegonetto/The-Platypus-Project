@@ -46,3 +46,62 @@ $offWhite: #F1F1F1;
   /* Give enough space above for the banner */
   margin-top: 60px;
 }
+
+.index-page-search-bar {
+  margin-top: 17em;
+} 
+
+.top-search-bar {
+  position: relative;
+  top: -51px;
+  left: -75px;
+}
+
+.search-wrapper {
+  width: 460px;
+  margin: 0px auto;    
+
+  .text-field {
+    width: 400px;
+    height: 35px;
+    float: left;
+    padding-left: 5px;
+
+    /* Borders */
+    border: 1px solid #333333;
+    border-right: none;
+
+    /* Font Formatting */
+    font-size: 18px;
+
+    /* Rounded Corners */
+    /* Safari 5, Chrome support border-radius without vendor prefix.
+     * FF 3.0/3.5/3.6, Mobile Safari 4.0.4 require vendor prefix.
+     * No support in Safari 3/4, IE 6/7/8, Opera 10.0.
+     */
+    -moz-border-top-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    outline: 0;
+  }    
+
+  .button {
+    height: 39px;
+    width: 55px;
+    float: right; 
+
+    /* Rounded corners */
+    -moz-border-top-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+

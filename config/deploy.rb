@@ -27,8 +27,8 @@ role :db, domain, :primary => true
 # if (for example) you have locally installed gems or applications.  Note:
 # this needs to contain the full values for the variables set, not simply
 # the deltas.
-# default_environment['PATH']='<your paths>:/usr/local/bin:/usr/bin:/bin'
-# default_environment['GEM_PATH']='<your paths>:/usr/lib/ruby/gems/1.8'
+#default_environment['PATH']='<your paths>:/usr/local/bin:/usr/bin:/bin'
+#default_environment['GEM_PATH']='/home/drake/.rvm/gems/ruby-1.9.3-p125/gems'
 
 # miscellaneous options
 set :deploy_via, :remote_cache

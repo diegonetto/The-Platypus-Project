@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% @search_list.search_items.each do |item| %>
+  <%= link_to item.query, search_path + "?q=#{item.query}" %> 
+<% end %>
 
-<%= link_to 'Edit', edit_search_list_path(@search_list) %> |
-<%= link_to 'Back', search_lists_path %>
