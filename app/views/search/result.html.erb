@@ -1,0 +1,14 @@
+<div class="result-page-search-bar">
+  <%= render 'search_bar' %>
+</div>
+
+<div class="query-results">
+  <% @result.each do |web| %>
+    <div>
+      <p>
+        <%= link_to web.title, web.uri %><br />
+        <%= web.content.html_safe %>  
+      </p>
+    </div> 
+  <% end %>
+</div>

@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Search list</th>
-    <th>Search string</th>
+    <th>Query</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
 <% @search_items.each do |search_item| %>
   <tr>
     <td><%= search_item.search_list_id %></td>
-    <td><%= search_item.search_string %></td>
+    <td><%= search_item.query %></td>
     <td><%= link_to 'Show', search_item %></td>
     <td><%= link_to 'Edit', edit_search_item_path(search_item) %></td>
     <td><%= link_to 'Destroy', search_item, confirm: 'Are you sure?', method: :delete %></td>

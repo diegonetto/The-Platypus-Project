@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328044242) do
+ActiveRecord::Schema.define(:version => 20120328074425) do
 
   create_table "search_items", :force => true do |t|
     t.integer  "search_list_id"
-    t.string   "search_string"
+    t.string   "query"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

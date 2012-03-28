@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Platypus</title>
+  <title>Web Searching, Simplified</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='page <%= controller.controller_name %>'>
 
-<%= yield %>
+<div id="banner">
+</div>
+
+<div id="main">
+  <%= yield %>
+</div>
 
 </body>
 </html>

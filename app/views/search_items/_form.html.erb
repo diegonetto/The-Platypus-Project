@@ -11,11 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :search_string %><br />
-    <%= f.text_field :search_string %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="search-wrapper">
+    <div class="centered">
+      <div class="search-query">
+        <%= f.text_field :query %>
+      </div>
+      <div class="search-button">
+        <%= f.submit 'Search' %>
+      </div>
+      <div class="clear-div">
+      </div>
+    </div>
   </div>
 <% end %>
+

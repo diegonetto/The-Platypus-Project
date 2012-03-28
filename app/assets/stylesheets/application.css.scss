@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+/* Sassy CSS Variables */
+$gradientStart: #333333;
+$gradientEnd: #000000;
+$offWhite: #F1F1F1;
+
+#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  /* Gradient */
+  background: -webkit-gradient(linear, left top, left bottom, from($gradientStart), to($gradientEnd));
+  background: -moz-linear-gradient(top, $gradientStart, $gradientEnd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000');  
+
+}
+
+.page {
+  background: $offWhite;
+
+  /* Font Formatting */
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+}
+
+#main {
+  /* Give enough space above for the banner */
+  margin-top: 60px;
+}

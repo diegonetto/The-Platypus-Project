@@ -1,3 +1,68 @@
 // Place all the styles related to the search_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search_items {
+
+  .search-wrapper {
+    width: 100%;
+    margin-top: 20em;
+  }
+
+  .centered {
+    width: 446px;
+    margin: 0px auto;
+  }
+
+  .search-query {
+    float: left;
+  }
+
+  .search-button {
+    float: right;
+
+    input {
+      height: 46px;
+      width: 55px;
+      -moz-border-top-right-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      border-top-right-radius: 5px;
+      -moz-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  .clear-div {
+    clear: both;
+  }
+
+  #search_item_query {
+    height: 40px;
+    width: 380px;
+    padding: 2px 5px;
+
+    /* Borders */
+    border: 1px solid #333333;
+    border-right: none;
+
+    /* Font Formatting */
+    font-size: 18px;
+
+    /* Rounded Corners */
+    /* Safari 5, Chrome support border-radius without vendor prefix.
+     * FF 3.0/3.5/3.6, Mobile Safari 4.0.4 require vendor prefix.
+     * No support in Safari 3/4, IE 6/7/8, Opera 10.0.
+     */
+    -moz-border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+    outline: 0;
+
+  }
+
+}

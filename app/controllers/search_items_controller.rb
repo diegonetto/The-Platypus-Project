@@ -40,11 +40,12 @@ class SearchItemsController < ApplicationController
   # POST /search_items
   # POST /search_items.json
   def create
-    @search_item = SearchItem.new(params[:search_item])
+    @list = current_search_list
+    @search_item = @list.search_items.build(params[:search_item])
 
     respond_to do |format|
       if @search_item.save
-        format.html { redirect_to @search_item, notice: 'Search item was successfully created.' }
+        format.html { redirect_to @search_item }
         format.json { render json: @search_item, status: :created, location: @search_item }
       else
         format.html { render action: "new" }

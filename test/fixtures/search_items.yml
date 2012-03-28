@@ -2,8 +2,8 @@
 
 one:
   search_list_id: 1
-  search_string: MyString
+  query: MyString
 
 two:
   search_list_id: 1
-  search_string: MyString
+  query: MyString
