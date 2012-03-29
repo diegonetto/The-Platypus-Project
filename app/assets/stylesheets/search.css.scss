@@ -30,14 +30,16 @@ $offWhite: #F1F1F1;
   }
 
   #recent-searches {
+    width: 300px;
+    position: absolute;
+    top: 18px;
+    left: 65%;
+    margin-left: -10px;
+    z-index: -1;
+
     font-size: 18px;
     font-weight: bold;
     text-align:center;
-
-    position: relative;
-    top: -80px;
-    left: 300px;
-    z-index: -1;
 
     a {
       text-decoration: none;
