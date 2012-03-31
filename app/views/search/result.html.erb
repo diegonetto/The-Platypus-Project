@@ -2,14 +2,17 @@
   <%= link_to "Recent Searches", @list %>
 </div>
 
-<div class="middle-content">
+<div class="results clearfix">
   <% @result.each do |web| %>
-    <div>
-      <p>
-        <span class="result-title"> <%= link_to web.title, web.uri %></span><br />
-        <%= web.content.html_safe %><br />
-        <span class="result-uri"><%= link_to web.uri, web.uri %></span>
-      </p>
-    </div> 
+    <div class="result-div">
+      <%= image_tag("x-mark.png", class: "delete-image", style: "display:none;") %>
+      <div class="content">
+        <p>
+          <span class="result-title"> <%= link_to web.title, web.uri %></span><br />
+          <%= web.content.html_safe %><br />
+          <span class="result-uri"><%= link_to web.uri, web.uri %></span>
+        </p>
+      </div> 
+    </div>
   <% end %>
 </div>

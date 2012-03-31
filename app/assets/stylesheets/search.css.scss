@@ -5,6 +5,11 @@
 $offWhite: #F1F1F1;
 
 .search {
+  .result-div {
+    position: relative;
+    max-width: 610px;
+    margin: 0px auto;
+  }
 
   .result-title {
     font-size: 18px;
@@ -27,6 +32,12 @@ $offWhite: #F1F1F1;
       background-color: transparent;
       text-decoration: underline;
     }
+  }
+
+  .delete-image {
+    position:absolute;
+    top: 0px;
+    left: -25px;
   }
 
   #recent-searches {

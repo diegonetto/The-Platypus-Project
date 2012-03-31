@@ -58,10 +58,6 @@ $offWhite: #F1F1F1;
 
 .index-page-search-bar {
   margin-top: 17em;
-  
-  .clear-div {
-    clear: both;
-  }
 } 
 
 .top-search-bar {
@@ -106,7 +102,7 @@ $offWhite: #F1F1F1;
   .button {
     height: 39px;
     width: 54px;
-    float: right; 
+    float: left; 
 
     /* Rounded corners */
     -moz-border-top-right-radius: 3px;
@@ -116,7 +112,9 @@ $offWhite: #F1F1F1;
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-  
+
 }
 
-
+.clearfix {
+  clear: both;
+}
