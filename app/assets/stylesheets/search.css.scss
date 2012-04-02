@@ -9,37 +9,48 @@ $offWhite: #F1F1F1;
     position: relative;
     max-width: 610px;
     margin: 0px auto;
-  }
 
-  .result-title {
-    font-size: 18px;
-    a {
-      color: #2C5EB5;
-      text-decoration: none;
-    }
-    a:hover {
-      background-color: transparent;
-      text-decoration: underline;
-    }
-  }
+    .content {
+      .result-title {
+        font-size: 18px;
+        a {
+          color: #2C5EB5;
+          text-decoration: none;
+        }
+        a:hover {
+          background-color: transparent;
+          text-decoration: underline;
+        }
+      }
 
-  .result-uri {
-    a {
-      text-decoration: none;
-      color: #F67F00;
-    }
-    a:hover {
-      background-color: transparent;
-      text-decoration: underline;
-    }
-  }
+      .result-uri {
+        a {
+          text-decoration: none;
+          color: #F67F00;
+        }
+        a:hover {
+          background-color: transparent;
+          text-decoration: underline;
+        }
+      }
 
-  .delete-image {
-    position:absolute;
-    top: 0px;
-    left: -25px;
-    cursor: pointer;
-  }
+    } /* End .content */
+
+    .delete-image {
+      position:absolute;
+      top: 0px;
+      left: -25px;
+      cursor: pointer;
+    }
+
+    .check-image {
+      position: absolute;
+      left: -25px;
+      cursor: pointer;
+    }
+
+  } /* End .result-div */
+
 
   #recent-searches {
     width: 300px;

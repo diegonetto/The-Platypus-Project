@@ -2,16 +2,47 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$ ->
-  # When a result-div's content is moused-over, hide all other delete
-  # images and show this one
-  $('.search .results .result-div .content').mouseover ->
-    $(this).parent().parent().find('.delete-image').hide()
-    $(this).parent().find('.delete-image').show()
+# Variable assignments
+offWhite = '#F1F1F1'
+deletedClass = 'deleted-result'
+checkedClass = 'checked-result'
 
-  # Hide the result when the x is clicked  
+$ ->
+  # When a result-div's content is moused-over, hide all other check or delete
+  # images and show only the ones for this result
+  $('.search .results .result-div .content').mouseover -> 
+    parent = $(this).parent()
+    hideContextImages(parent)
+    parent.find('.delete-image').show()
+  
+    # Since we want the check image to appear at the bottom, find the height
+    # and set the absolute position for the top dynamically
+    # Only show image if it does not have the checkedClass
+    if !parent.hasClass(checkedClass)
+      checkImage = parent.find('.check-image')
+      top = parent.height() - checkImage.height() - 3
+      checkImage.css('top', top)
+      checkImage.show()
+ 
+  # Function that does the actual hiding of delete and check images
+  hideContextImages = (e) ->
+    e.parent().find('.delete-image').hide()
+    e.parent().find('.check-image').hide()   
+
+  # Logic for when the delete-image is clicked  
   $('.search .results .result-div .delete-image').click ->
     parent = $(this).parent()
-    parent.hide('drop', 1000)
-    parent.addClass('deleted-result')
+    if parent.hasClass('checked-result')
+      parent.removeClass('checked-result')
+      parent.css({'background-color':'#90FD54'}).animate({'background-color':offWhite}, 1000);
+      parent.find('.check-image').show()
+    else 
+      parent.hide('drop', 1000)
+    parent.addClass(deletedClass)
 
+  # Perform a highlight-fade animation when the check mark is clicked
+  $('.search .results .result-div .check-image').click ->
+    parent = $(this).parent()
+    parent.css({'background-color':'#90FD54'}).animate({'background-color':'#DDFFDE'}, 1000)
+    parent.addClass(checkedClass)
+    $(this).hide()
