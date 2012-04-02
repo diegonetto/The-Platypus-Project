@@ -3,13 +3,15 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
+  # When a result-div's content is moused-over, hide all other delete
+  # images and show this one
   $('.search .results .result-div .content').mouseover ->
     $(this).parent().parent().find('.delete-image').hide()
     $(this).parent().find('.delete-image').show()
 
-  $('.search .results .result-div .delete-image').mouseover ->
-    $(this).css('cursor', 'pointer');
-
+  # Hide the result when the x is clicked  
   $('.search .results .result-div .delete-image').click ->
-    $(this).parent().hide('drop', 1000)
+    parent = $(this).parent()
+    parent.hide('drop', 1000)
+    parent.addClass('deleted-result')
 
