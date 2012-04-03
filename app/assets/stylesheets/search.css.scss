@@ -5,6 +5,30 @@
 $offWhite: #F1F1F1;
 
 .search {
+
+  #right-nav-menu-wrapper {
+    width: 100%;
+    position: fixed;
+  }
+
+  #right-nav-menu {
+    width: 200px;
+    margin: 0px auto;
+    position: relative;
+    left: 450px;
+
+    a {
+      text-decoration: none;
+      color: #F67F00;
+      font-weight: bold;
+    }
+    
+    a:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+ 
   .result-div {
     position: relative;
     max-width: 610px;
@@ -50,32 +74,5 @@ $offWhite: #F1F1F1;
     }
 
   } /* End .result-div */
-
-
-  #recent-searches {
-    width: 300px;
-    position: absolute;
-    top: 18px;
-    left: 65%;
-    margin-left: -10px;
-
-    font-size: 18px;
-    font-weight: bold;
-    text-align:center;
-
-    a {
-      text-decoration: none;
-      color: $offWhite;
-    }
-
-    a:visited {
-      color: $offWhite;
-    }
-  
-    a:hover {
-      color: #F67F00;
-      background-color: transparent;
-    }
-  }
 
 } /* End .search */
