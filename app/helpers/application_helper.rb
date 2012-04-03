@@ -9,5 +9,13 @@ module ApplicationHelper
     end
     div_class     
   end
+ 
+  # helper function that returns true if currently viewing the homepage
+  def on_home_page
+    if current_page?('/')
+      return true
+    end
+    return false;
+  end
 
 end

@@ -5,30 +5,6 @@
 $offWhite: #F1F1F1;
 
 .search {
-
-  #right-nav-menu-wrapper {
-    width: 100%;
-    position: fixed;
-  }
-
-  #right-nav-menu {
-    width: 200px;
-    margin: 0px auto;
-    position: relative;
-    left: 450px;
-
-    a {
-      text-decoration: none;
-      color: #F67F00;
-      font-weight: bold;
-    }
-    
-    a:hover {
-      background-color: transparent;
-      text-decoration: underline;
-    }
-  }
- 
   .result-div {
     position: relative;
     max-width: 610px;

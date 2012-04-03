@@ -15,6 +15,14 @@
   <%= render 'search/search_bar' %>
 </div>
 
+<% if !on_home_page %>
+  <div id="right-nav-menu-wrapper">
+    <div id="right-nav-menu">
+      <%= link_to "Recent Searches", @list %>
+    </div>
+  </div>
+<% end %>
+
 <div id="main">
   <%= yield %>
 </div>
