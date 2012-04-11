@@ -54,3 +54,5 @@ gem 'capistrano'
 # Use nokogiri Reader Parser
 gem 'nokogiri'
 
+# Use gsearch-parser gem
+gem 'gsearch-parser'

@@ -1,5 +1,3 @@
-require 'google_search'
-
 class SearchController < ApplicationController
   def index
   end
@@ -9,7 +7,7 @@ class SearchController < ApplicationController
     query = params[:q]
     #@result = Google::Search::Web.new(:query => query)    
   
-    @result = GoogleSearch.new(query)
+    @result = GSearchParser.webSearch(query)
 
     # Get the current list associated with this session
     @list = current_search_list
