@@ -55,4 +55,4 @@ gem 'capistrano'
 gem 'nokogiri'
 
 # Use gsearch-parser gem
-gem "gsearch-parser", "~> 0.3.7"
+gem "gsearch-parser", "~> 0.3.8"
