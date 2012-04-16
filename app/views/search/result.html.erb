@@ -1,15 +1,9 @@
 <div class="results clearfix">
-  <% @result.each do |web| %>
-    <div class="result-div">
-      <%= image_tag("x-mark.png", class: "delete-image", style: "display:none;") %>
-      <div class="content">
-        <p>
-          <span class="result-title"> <%= link_to web.title, web.uri %></span><br />
-          <%= web.content.html_safe %><br />
-          <span class="result-uri"><%= link_to web.uri, web.uri %></span>
-        </p>
-      </div> 
-      <%= image_tag("check-mark.png", class: "check-image", style: "display:none;") %>
-    </div>
-  <% end %>
+  <%= render 'search/result_divs' %>
+  <div class="ajax-load-wrapper">
+    <%= image_tag("ajax-loader.gif", class: "ajax-load", style: "display: none;") %>
+  </div>
+  <div class="next-page" style="display: none;">
+    <%= @nextURI %>
+  </div>
 </div>

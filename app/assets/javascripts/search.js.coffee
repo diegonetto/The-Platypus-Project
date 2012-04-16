@@ -7,7 +7,7 @@ offWhite = '#F1F1F1'
 deletedClass = 'deleted-result'
 checkedClass = 'checked-result'
 
-$ ->
+$ bind = () ->
   # When a result-div's content is moused-over, hide all other check or delete
   # images and show only the ones for this result
   $('.search .results .result-div .content').mouseover -> 
@@ -45,4 +45,28 @@ $ ->
     parent = $(this).parent()
     parent.css({'background-color':'#90FD54'}).animate({'background-color':'#DDFFDE'}, 1000)
     parent.addClass(checkedClass)
+    $(this).hide()
+
+  # TODO: Make an Ajax request for more results when the page is scrolled to the bottom
+  $(window).scroll ->
+    if $(window).scrollTop() >= $(document).height() - $(window).height() - 1
+     uri = $('.next-page').text()
+     $.ajax(url: '/search/ajax', data: "uri="+escape(uri), dataType: "html", success: loadMore)
+
+  # Function that handles the ajax response to load more results
+  loadMore = (data) ->
+    $('.next-page').remove()
+    $('.results').append(data)
+    loadImg = $('.ajax-load-wrapper').detach()
+    loadImg.appendTo('.results')
+    bind()
+
+  # TODO: Make an Ajax request for more results if there are fewer than 5 results currenly shown
+
+  # Show loading image during AJAX start
+  $('.ajax-load').ajaxStart ->
+    $(this).show()
+
+  # Hide loading image during AJAX stop
+  $('.ajax-load').ajaxStop ->
     $(this).hide()

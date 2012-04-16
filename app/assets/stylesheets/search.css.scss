@@ -1,3 +1,4 @@
+
 // Place all the styles related to the Search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -11,6 +12,10 @@ $offWhite: #F1F1F1;
     margin: 0px auto;
 
     .content {
+      em {
+        font-style: normal;
+        font-weight: bold;
+      }
       .result-title {
         font-size: 18px;
         a {
@@ -50,5 +55,16 @@ $offWhite: #F1F1F1;
     }
 
   } /* End .result-div */
+
+  .ajax-load-wrapper {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+
+    .ajax-load {
+      position: fixed;
+      bottom: 0px;
+    }
+  }
 
 } /* End .search */

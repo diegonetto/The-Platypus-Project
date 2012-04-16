@@ -1,6 +1,7 @@
 Platypus::Application.routes.draw do
   get "search/index"
   get "search/query"
+  get "search/ajax"
 
   resources :search_items
 
