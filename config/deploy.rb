@@ -1,6 +1,8 @@
 # be sure to change these
 set :user, 'ubuntu'
-set :domain, '23.21.99.50'
+# set :domain, '23.21.99.50', '23.23.203.246'
+set :domain, '23.23.203.246'
+
 set :application, 'platypus'
 
 # adjust if you are using RVM, remove if you are not
