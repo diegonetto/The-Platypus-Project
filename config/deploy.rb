@@ -1,7 +1,7 @@
 # be sure to change these
 set :user, 'ubuntu'
 # set :domain, '23.21.99.50', '23.23.203.246'
-set :domain, '23.23.203.246'
+set :domain, '23.23.207.167'
 
 set :application, 'platypus'
 
