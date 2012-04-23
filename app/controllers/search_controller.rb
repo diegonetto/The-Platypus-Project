@@ -27,7 +27,7 @@ class SearchController < ApplicationController
     uri = params[:uri].strip
 
     # Decode the uri
-    decodedURI = URI.unescape(uri)
+    decodedURI = URI.unescape(uri).gsub(/ /, '+')
 
     # Parse a new search page using the uri
     @webSearch = GSearchParser.parseSearchPage(decodedURI)
