@@ -11,9 +11,20 @@
 <div id="banner">
 </div>
 
+
 <div class="<%= search_bar_location %>">
+  <% if on_home_page %>
+    <div id="logo">
+       <%= image_tag("logo.png", class: "picture") %>
+    </div>
+  <% end %>
   <%= render 'search/search_bar' %>
 </div>
+
+<% if on_home_page %>
+    <center><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHit Enter to search!</b></center>
+<% end %>
+
 
 <% if !on_home_page %>
   <div id="right-nav-menu-wrapper">

@@ -13,8 +13,8 @@
 */
 
 /* Sassy CSS Variables */
-$gradientStart: #333333;
-$gradientEnd: #000000;
+$gradientStart: #FF0000;
+$gradientEnd: #6F0404;
 $offWhite: #F1F1F1;
 
 #banner {
@@ -22,15 +22,14 @@ $offWhite: #F1F1F1;
   top: 0;
   left: 0;
   width: 100%;
-  height: 55px;
-  border-top: 1px solid black;
+  height: 35px;
   border-bottom: 1px solid black;
   z-index: 1;
 
   /* Gradient */
   background: -webkit-gradient(linear, left top, left bottom, from($gradientStart), to($gradientEnd));
   background: -moz-linear-gradient(top, $gradientStart, $gradientEnd);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000');  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0000', endColorstr='#6F0404');  
 
 }
 
@@ -47,7 +46,7 @@ $offWhite: #F1F1F1;
 
   a {
     text-decoration: none;
-    color: #F67F00;
+    color: #7481cc;
     font-weight: bold;
   }
 
@@ -80,62 +79,52 @@ $offWhite: #F1F1F1;
   margin-top: 60px;
 }
 
+#logo {
+  margin-top: -150px;
+  z-index: -10;
+}
+
+.picture {
+  margin-left: 230px;
+  margin-bottom: -50px;
+}
+
 .index-page-search-bar {
-  margin-top: 17em;
+  margin-top: 19em;
+  z-index: 10;
 } 
 
 .top-search-bar {
   position: fixed;
   width: 100%;
-  top: 9px;
+  top: 2px;
   z-index: 5;
 }
 
 .search-wrapper {
-  width: 460px;
-  margin: 0px auto;    
-
-  .text-field {
-    width: 400px;
-    height: 35px;
-    float: left;
-    padding-left: 5px;
-
-    /* Borders */
-    border: 1px solid #333333;
-    border-right: none;
-
-    /* Font Formatting */
-    font-size: 18px;
-
-    /* Rounded Corners */
-    /* Safari 5, Chrome support border-radius without vendor prefix.
-     * FF 3.0/3.5/3.6, Mobile Safari 4.0.4 require vendor prefix.
-     * No support in Safari 3/4, IE 6/7/8, Opera 10.0.
-     */
-    -moz-border-top-left-radius: 3px;
-    -webkit-border-top-left-radius: 3px;
-    border-top-left-radius: 3px;
-    -moz-border-bottom-left-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-
-    outline: 0;
-
+  width: 250px;
+  margin: 0px auto;
+ .text-field {
+    background: url(search-dark.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #000000;
+    width: 250px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
   }    
 
   .button {
-    height: 39px;
-    width: 54px;
-    float: left; 
-
-    /* Rounded corners */
-    -moz-border-top-right-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    border-top-right-radius: 3px;
-    -moz-border-bottom-right-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    border-bottom-right-radius: 3px;
   }
 
 }

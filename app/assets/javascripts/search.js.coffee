@@ -10,12 +10,18 @@ checkedClass = 'checked-result'
 locked = false
 
 $ bind = () ->
+
+   #$('.search .results .result-div .content').onLoad
+   # links = document.getElementByTagName('a')
+   #  $(this).parent.find('visited-image').show() for link in links   	 #	when link.style.color is "#AB4239"
+
   # When a result-div's content is moused-over, hide all other check or delete
   # images and show only the ones for this result
   $('.search .results .result-div .content').mouseover -> 
     parent = $(this).parent()
     hideContextImages(parent)
     parent.find('.delete-image').show()
+    parent.find('.rtab-image').show()
   
     # Since we want the check image to appear at the bottom, find the height
     # and set the absolute position for the top dynamically
@@ -29,7 +35,8 @@ $ bind = () ->
   # Function that does the actual hiding of delete and check images
   hideContextImages = (e) ->
     e.parent().find('.delete-image').hide()
-    e.parent().find('.check-image').hide()   
+    e.parent().find('.check-image').hide()
+    e.parent().find('.rtab-image').hide()   
 
   # Logic for when the delete-image is clicked  
   $('.search .results .result-div .delete-image').click ->
