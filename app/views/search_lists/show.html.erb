@@ -2,7 +2,7 @@
 
 <div class="middle-content clearfix">
   <h2>Recent search terms</h2>
-  <% @search_list.search_items.each do |item| %>
+  <% @search_list.search_items.reverse.each do |item| %>
     <ul>
       <li>
       <%= link_to item.query, search_path + "?q=#{item.query}", class: "search-keyword" %>
