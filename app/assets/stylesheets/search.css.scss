@@ -76,6 +76,15 @@ $offWhite: #F1F1F1;
       width:655px;
     }
 
+    .visit-image {
+      position:absolute;
+      top: -6px;
+      left: -32px;
+      z-index:-1;
+      height:124%;
+    }
+    
+
   } /* End .result-div */
 
   .ajax-load-wrapper {

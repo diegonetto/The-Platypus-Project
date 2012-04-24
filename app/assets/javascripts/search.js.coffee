@@ -9,11 +9,16 @@ checkedClass = 'checked-result'
 
 locked = false
 
+# TODO: Get this to work
+# Looks at link color and puts visited image up if visited
+#$('.search .results .result-div .content').onLoad ->
+#   color = document.defaultView.getComputedStyle(document.getElementByTag("a"), null).getPropertyValue("color")
+#   visited = "#c9c9c9"
+#   if color == visited
+#      parent.find('.visit-image').show()
+
 $ bind = () ->
 
-   #$('.search .results .result-div .content').onLoad
-   # links = document.getElementByTagName('a')
-   #  $(this).parent.find('visited-image').show() for link in links   	 #	when link.style.color is "#AB4239"
 
   # When a result-div's content is moused-over, hide all other check or delete
   # images and show only the ones for this result
