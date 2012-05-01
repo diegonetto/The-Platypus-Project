@@ -17,9 +17,7 @@ locked = false
 #   if color == visited
 #      parent.find('.visit-image').show()
 
-$ bind = () ->
-
-
+$ bind = ()->
   # When a result-div's content is moused-over, hide all other check or delete
   # images and show only the ones for this result
   $('.search .results .result-div .content').mouseover -> 
@@ -36,7 +34,7 @@ $ bind = () ->
       top = parent.height() - checkImage.height() - 3
       checkImage.css('top', top)
       checkImage.show()
- 
+
   # Function that does the actual hiding of delete and check images
   hideContextImages = (e) ->
     e.parent().find('.delete-image').hide()
@@ -61,6 +59,9 @@ $ bind = () ->
     parent.addClass(checkedClass)
     $(this).hide()
 
+  unbindDeleteImageClicks = () ->
+    $('.search .results .result-div .delete-image').unbind('click')
+
   # TODO: Make an Ajax request for more results when the page is scrolled to the bottom
   $(window).scroll ->
 #    if $(window).scrollTop() == $(document).height() - $(window).height() - 10
@@ -75,7 +76,8 @@ $ bind = () ->
     $('.results').append(data)
     loadImg = $('.ajax-load-wrapper').detach()
     loadImg.appendTo('.results')
-    bind()
+    unbindDeleteImageClicks()
+    bind()	
 
   # TODO: Make an Ajax request for more results if there are fewer than 5 results currenly shown
 
