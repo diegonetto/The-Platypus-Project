@@ -15,4 +15,16 @@
   .search-keyword:hover {
     text-decoration: underline;
   }
+
+  li { 
+    list-style-type: none;
+  }  
+
+  .recent-search-delete {
+    position: relative;
+    top: -2px;
+    float: left;
+    padding-right: 5px;
+  }
+  
 }

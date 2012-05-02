@@ -76,9 +76,13 @@ class SearchItemsController < ApplicationController
     @search_item = SearchItem.find(params[:id])
     @search_item.destroy
 
+    # Get the current list associated with this session
+    @search_list = current_search_list
+
     respond_to do |format|
       format.html { redirect_to search_items_url }
       format.json { head :no_content }
+      format.js
     end
   end
 end

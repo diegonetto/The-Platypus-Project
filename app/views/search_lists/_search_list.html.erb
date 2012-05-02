@@ -1,0 +1,9 @@
+<% search_list.search_items.reverse.each do |item| %>
+  <ul>
+    <li>
+    <%= link_to item.query, search_path + "?q=#{item.query}", class: "search-keyword" %>
+    <%= button_to '&times;'.html_safe, item, method: :delete, remote: true, form_class: 'recent-search-delete' %>
+    </li>
+  </ul>
+<% end %>
+
